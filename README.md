@@ -10,14 +10,19 @@ into a single OpenSearch aggregation request.
 <img src="README-Images/dashboard.png" alt="Dashboard screenshots" width="1000">
 
 > [!NOTE]
-> The plugin was **written with an AI assistant<sup>(1)</sup> and it is meant to be maintained the
+> * The plugin was **written with an AI assistant<sup>(1)</sup> and it is meant to be maintained the
 > same way**. What that changes for whoever picks it up, and what stands in for a line by line human
 > reading, is set out in [CUSTOMISING.md](CUSTOMISING.md#written-with-an-assistant-and-maintained-with-one).
 >
-> **Want a dashboard of your own?** This plugin is meant to be forked and changed, and **it was built
+> * **Want a dashboard of your own?** This plugin is meant to be forked and changed, and **it was built
 > to be changed with an AI assistant**. See [CUSTOMISING.md](CUSTOMISING.md) — the four layers a change
 > can belong to, a prompt to paste for each kind of change, what to verify, how to ship your own renamed
 > package, and the security checklist to run on the diff.
+> 
+> * It has been built to also handle large repositories, far beyond demo purpose, but it then rely on the
+> deployed architecture, clusters and all. Still, values calculated for "All time" may take quite some time.
+> Anyone is welcome to improve the plugin. With an AI assistant :-)
+> (See [Performance depends on the cluster](#performance-depends-on-the-cluster))
 >
 > (1): OpenCode driving Claude Opus 5/5.5, September 2026
 
