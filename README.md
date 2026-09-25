@@ -1023,9 +1023,11 @@ reset](#the-audit-only-goes-back-to-its-last-reset).
   dashboards replace that line with a subtitle of their own. Read it page by page, over the periods
   people will actually choose, before rolling the dashboard out.
 
-## Build
+## Build and Deploy
 
 ```bash
+git clone https://github.com/nuxeo-sandbox/nuxeo-labs-repository-dashboard
+cd nuxeo-labs-repository-dashboard
 mvn clean install
 ```
 
@@ -1038,11 +1040,15 @@ The marketplace package lands in
 
 ## Install
 
+The package declares `restart="true"`, so restart the server afterwards.
+
+### Local Install
+
 ```bash
-nuxeoctl mp-install nuxeo-labs-repository-dashboard-package-*.zip --accept=true
+nuxeoctl mp-install /path/to/nuxeo-labs-repository-dashboard-package/target/nuxeo-labs-repository-dashboard-package-*.zip
 ```
 
-The package declares `restart="true"`, so restart the server afterwards. Inside a container:
+Inside a container:
 
 ```bash
 docker cp nuxeo-labs-repository-dashboard-package-*.zip <container>:/tmp/
@@ -1052,6 +1058,14 @@ docker restart <container>
 
 Then open <http://localhost:8080/nuxeo/dashboard/>, or use **Administration → Repository
 Dashboard** in Web UI.
+
+### Public Marketplace
+
+The plugin is available in the public marketplace, so you can easily install it:
+
+* As a dependency in your Studio project (select it in the list of plugins)
+* Add it to `NUXEO_PACKAGES` for Docker
+* Install via `nuxeoctl mp-install nuxeo-labs-repository-dashboard`
 
 ### Acceptance checklist
 
@@ -1668,11 +1682,25 @@ calls it.
 | 6f | Sections and tabs, so a layout can group its widgets without a component | done |
 | 7 | Downloads dashboard, counting what a reader saved apart from what the interface fetched | done |
 
+## Support
+**These features are not part of the Nuxeo Production platform.**
+
+These solutions are provided for inspiration and we encourage customers to use them as code samples and learning
+resources.
+
+This is a moving project (no API maintenance, no deprecation process, etc.) If any of these solutions are found to be
+useful for the Nuxeo Platform in general, they will be integrated directly into platform, not maintained here.
+
 ## Licence
 
 [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0)
 
 ## About Nuxeo
 
-[Nuxeo](https://www.hyland.com/products/nuxeo-platform), part of Hyland, is a highly customizable
-and extensible content management platform for building business applications.
+Nuxeo Platform is an open source highly scalable, cloud-native, enterprise content management product with rich multimedia support, written in Java. Data can be stored in both SQL & NoSQL databases.
+
+The development of the Nuxeo Platform is mostly done by Nuxeo employees with an open development model.
+
+The source code, documentation, roadmap, issue tracker, testing, benchmarks are all public.
+
+More information is available at [Hyland/Nuxeo](https://www.hyland.com/en/solutions/products/nuxeo-platform).

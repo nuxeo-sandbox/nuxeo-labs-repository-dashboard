@@ -9,7 +9,7 @@
 
   <groupId>org.nuxeo.labs.dashboard</groupId>
   <artifactId>nuxeo-labs-repository-dashboard-parent</artifactId>
-  <version>2025.1.0-SNAPSHOT</version>
+  <version>2025.2.0-SNAPSHOT</version>
   <name>Nuxeo Labs Repository Dashboard</name>
   <description>Configurable, admin-only analytics dashboard for a Nuxeo repository. Angular SPA served by Nuxeo, reading aggregations from the OpenSearch passthrough.</description>
   <packaging>pom</packaging>
