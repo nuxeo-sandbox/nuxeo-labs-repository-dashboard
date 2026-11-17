@@ -26,6 +26,11 @@ into a single OpenSearch aggregation request.
 >
 > (1): OpenCode driving Claude Opus 5/5.5, September 2026
 
+> [!IMPORTANT]
+> It is a **Nuxeo Presales Sandbox plugin**, showing art of the possible but not included as part of the
+> Nuxeo Platform and, so, **not supported**. If you need it **we strongly recommend a Nuxeo Partner forks
+> the code and takes ownership** (tuning, maintenance, support)
+
 ## Status
 
 **Seven screens live.** Content, Users, Downloads, Workflows, Tasks and Governance are
@@ -1686,10 +1691,11 @@ calls it.
 **These features are not part of the Nuxeo Production platform.**
 
 These solutions are provided for inspiration and we encourage customers to use them as code samples and learning
-resources.
+resources. This is a moving project (no API maintenance, no deprecation process, etc.) 
 
-This is a moving project (no API maintenance, no deprecation process, etc.) If any of these solutions are found to be
-useful for the Nuxeo Platform in general, they will be integrated directly into platform, not maintained here.
+> [!TIP]
+> If you need this feature,  **we strongly recommend a Nuxeo Partner or your dev team forks the code
+> and takes ownership** (tuning, maintenance, support)
 
 ## Licence
 
